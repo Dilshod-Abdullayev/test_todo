@@ -1,4 +1,4 @@
-name: CI for React Todo App
+name: CI for React Todo App with pnpm
 
 on:
   push:
@@ -21,7 +21,10 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies with pnpm
         run: pnpm install
 
       - name: Run tests
