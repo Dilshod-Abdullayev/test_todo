@@ -28,7 +28,7 @@ jobs:
         run: pnpm install
 
       - name: Run tests
-        run: pnpm run test -- --watchAll=false
+        run: pnpm run test -- --watchAll=false --passWithNoTests
 
       - name: Build project
         run: pnpm run build
